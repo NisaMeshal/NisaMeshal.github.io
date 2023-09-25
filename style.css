@@ -10,3 +10,13 @@ html {
     display: flex;
     flex-direction: row;
 }
+
+header {
+    position: fixed;
+    display: block;
+}
+
+nav {
+    display: flex;
+    justify-content: right;
+}
