@@ -33,16 +33,22 @@ a:hover {
 
 header {
     position: fixed;
-    margin-top: 0px; 
+    margin-top: 0px;
+    padding-left: 20px;
+    padding-top: 5px;
     width: 100%;
-    height: 50px;
+    height: 60px;
     display: block;
     background-color: var(--background);
 }
 
+nav {
+    padding-top: 10px;
+}
+
 nav a{
     padding: 10px;
-    margin: 0 7px;
+    margin: 10px 0px 10px 20px;
     text-decoration: none;
     font-weight: 600;
     color: var(--purple);
@@ -134,7 +140,7 @@ nav a{
 /* kintamani image */
 
 #bio img {
-    width: 25%; 
+    width: 50%; 
     display: inline; 
     border-radius: 7%;
 }
@@ -143,39 +149,72 @@ nav a{
 
 #bio-container {
     margin-left: 100px; 
+    display: flex; 
+    flex-direction: column;
+    justify-content: center;
 }
 
 #bio h3 {
     color: var(--purple);
     font-family: 'Montserrat', sans-serif;
-    display: inline; 
+    margin-bottom: 50px;
 }
 
 /* experience section */
 #experience {
-    width: 100%;
-    
+    width: 98%;
+    padding-left: 25px;  
+    display: grid;
+    grid-template-columns: auto auto;
+    grid-template-rows: auto auto;
+    row-gap: 20px;
+    column-gap: 20px;
+}
+
+#aws {
+    grid-area: 1/2/2/3;
+}
+
+#ampac {
+    grid-area: 2/2/3/3;
 }
 
 /* company is a container that has every experience */
 .company {
     width: 700px; 
+    height: 300px; 
     padding: 10px; 
-    border: 2px solid whitesmoke;
+    border: 2px solid aliceblue;
     border-radius: 2%;
     display: grid;
     grid-template-columns: auto auto;
-    grid-template-rows: auto auto auto;
+    grid-template-rows: 40px 30px auto;
+}
 
+.company:hover {
+    transition: all 0.5s ease-in-out;
+    box-shadow: 0 0 10px 1px aliceblue;
 }
 
 .company h3 {
     color: var(--blue);
+    font-family: 'Montserrat', sans-serif;
     background-color: white;
+    grid-column: 1/3;
+    grid-row: 1/2; 
 }
 
 .company h4 {
     color: var(--purple);
     background-color: beige;
+    grid-column: 1/2;
+    grid-row: 2/3;
+}
+
+.company h6 {
+    color: aliceblue;
+    grid-column: 2/3;
+    grid-row: 2/3;
+    text-align: right;
 }
 
